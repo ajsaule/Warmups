@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Accordion</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+        
+        * {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        nav {
+            width: 300px;
+            height: 800px
+        }
+        button {
+            border-radius: 0px;
+            border: none;
+            border-bottom: 1px solid darkgray;
+            text-align: left;
+            padding-left: 15px;
+            font-size: large;
+        }
+        #menu-btn-first {
+            border-radius: 5px 5px 0 0;
+        }
+        #menu-btn-last {
+            border-radius: 0 0 5px 5px;
+        }
+        .icon-left {
+            padding-right: 20px;
+        }
+        .icon-arrow {
+            float: right;
+            padding-right: 15px;
+        }
+        .accordion-btn {
+            width: 100%;
+            height: 45px;
+        }
+        .panel > * {
+            display: block;
+        }
+        .menu-link-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 30px;
+            background-color: grey;
+        }
+        .menu-link-item:hover {
+            background-color: black;
+        }
+
+        .panel {
+            display: none;
+            -webkit-animation: slide-up 1s ease forwards;
+            /* Safari 4+ */
+            -moz-animation: slide-up 1s ease forwards;
+            /* Fx 5+ */
+            -o-animation: slide-up 1s ease forwards;
+            /* Opera 12+ */
+            animation: slide-up 1s ease forwards;
+            /* IE 10+ */
+        }
+
+        @keyframes slide-up {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <button id="menu-btn-first" class="accordion-btn">
+            <i class="fas fa-database icon-left"></i>Databse<i class="fas fa-angle-down icon-arrow"></i>
+        </button>
+        <div id="demo1" class="panel">
+            <a href="#" class="menu-link-item">PostgreSQL</a>
+            <a href="#" class="menu-link-item">bCrypt</a>
+            <a href="#" class="menu-link-item">CRUD</a>
+        </div>
+        <button class="accordion-btn">
+            <i class="fas fa-code icon-left"></i>Logic<i class="fas fa-angle-down icon-arrow"></i>
+        </button>
+        <div id="demo2" class="panel">
+            <a href="#" class="menu-link-item">JavaScript</a>
+            <a href="#" class="menu-link-item">jQuery</a>
+            <a href="#" class="menu-link-item">Ruby</a>
+        </div>
+        <button class="accordion-btn">
+            <i class="fas fa-sticky-note icon-left"></i>Notes<i class="fas fa-angle-down icon-arrow"></i>
+        </button>
+        <div id="demo3" class="panel">
+            <a href="#" class="menu-link-item">AJAX Requests</a>
+            <a href="#" class="menu-link-item">React Componeents</a>
+            <a href="#" class="menu-link-item">Single Page Applications</a>
+        </div>
+        <button id="menu-btn-last" class="accordion-btn">
+            <i class="fas fa-history icon-left"></i>Revision<i class="fas fa-angle-down icon-arrow"></i>
+        </button>
+        <div id="demo4" class="panel">
+            <a href="#" class="menu-link-item">DOM Tree</a>
+            <a href="#" class="menu-link-item">Node List</a>
+            <a href="#" class="menu-link-item">Anonymous Functions</a>
+        </div>
+    </nav>
+
+    <script>
+        var accordionButton = document.querySelectorAll('button')
+        
+        function handleAccordion(e) {
+            // let accordionMenu = document.getElementById(divId)
+
+            if (e.target.style.display === '' || e.target.style.display === 'none') {
+                e.target.style.display = 'block'
+            } else {
+                e.target.style.display = 'none'
+            }
+        }
+        
+        accordionButton.forEach(node => node.addEventListener('click', handleAccordion))
+
+    </script>
+</body>
+</html>
