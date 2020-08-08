@@ -34,3 +34,5 @@ class Scrabble
 end 
 
 p Scrabble.new(word_2).check_score
+
+## there is probably a way to do this exercise with less loops
