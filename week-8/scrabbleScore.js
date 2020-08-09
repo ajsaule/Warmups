@@ -12,18 +12,27 @@ var letterScores =
         10: ['Q', 'Z'],
     }
 
-// letterScores.forEach((key, value) => console.log(`${key}, ${value}`))
-
-for (key in letterScores) {
-        console.log(key + ":" + letterScores[key])
-}
+var letterScoresHash = {  } // generate new hash in here 
 
 // can do the same solution by just re-arranging to a pure hash table 
-// algorithm becomes alot more efficient 
+// Use for..in loop to loop through keys and construct new object hash map of values 
+
+for (key in letterScores) {
+    letterScores[key].forEach(value => console.log(letterScores[key]) //letterScoresHash[`${key}`] = `${value.toLowerCase()}`)
+}
+
+// algorithm becomes alot more efficient when using a single hash table to lookup the value of each letter 
+
 // we can write code to build the hash above and then go through it as a lookup 
 
-var letterScoresTwo = 
-    {  }
+// How to write code to construct the above into a hash map (lookup table )
+
+// var letterScoresTwo = {}
+
+// letterScoresTwo.push("1: 'do it'")
+
+// console.log(letterScoresTwo)
+    
 
 
 // try .map.sum solution
