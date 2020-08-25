@@ -1,0 +1,22 @@
+var userInput = userInput(value('Give me a string'));
+
+let airCon = 50
+// Can an inpout be restrited to just str or int
+let decom = 'Non Fucntional'
+
+if (airCon != decom && airCon > 50) {
+    console.log("Turn on the A/C Pwease")
+}
+else if (airCon === decom && airCon < 50) {
+    console.log('Fix the A/C now! It's hawt!')
+}
+else if (airCon === decom && airCon < 50) {
+    console.log('Fix the A/C whenever you have the chance... It's ice cold...')
+}
+
+
+
+
+
+
+https://gist.github.com/kasun-maldeni/a31606b2203be0f150b50ac715dc8a9a

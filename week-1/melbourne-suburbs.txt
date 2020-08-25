@@ -1,0 +1,1 @@
+var userInput = userInput(value('Give me a string'));'

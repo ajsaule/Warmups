@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@515&display=swap');
+
+h1, h2, h4 {
+    font-family: 'Indie Flower', cursive !important;
+    text-align: center;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper {
+    padding: 40px;
+    width: 500px;
+    height: 950px;
+    margin: auto;
+    background-color: rgba(149, 68, 224, 0.521);
+    border-radius: 15px;
+}
+
+footer p span {
+    color: brown;
+}
