@@ -10,13 +10,13 @@ function smallestCommons(arr) {
     // first do a sort on the given array to get ascending order
     arr.sort();
     // get a range between the two given integers ** Caveat there are magic numbers in here
-    let givenRange = [...Array(arr[1] - 2).keys()].map(i => i + arr[0] + 1);
+    let givenRange = [...Array(arr[1]).keys()].map(i => i + arr[0]);
     // setup some variables for the test 
     let targetNum = 0;
     let i = 1; // don't set to 0 or will always eval to true 
     // setup a loop so that you check over divisibility of each number and numbers in the range 
     while (targetNum === 0) {
-        if (i % arr[0] === 0 && i % arr[1] === 0) {
+        //if (i % arr[0] === 0 && i % arr[1] === 0) {
             // newArr = givenRange.filter(num => {
             //     if (i % num === 0) {
             //         return num 
@@ -26,7 +26,7 @@ function smallestCommons(arr) {
                 targetNum = i;
                 break 
             } 
-        }
+        //}
         console.log('looping')
         i++
     }
@@ -35,4 +35,4 @@ function smallestCommons(arr) {
     return targetNum;
 }
 
-console.log(smallestCommons([1, 5]))
+console.log(smallestCommons([1, 13]))
